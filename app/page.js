@@ -4,7 +4,7 @@ import {Box, Stack, TextField, Button, Modal, Typography} from '@mui/material'
 import {useState, useEffect} from "react"
 import {} from 'firebase/firestore'
 import {auth} from '@/firebase'
-import {AuthErrorCodes, connectAuthEmulator, signInWithEmailAndPassword} from 'firebase/auth'
+import {AuthErrorCodes, connectAuthEmulator, signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth'
 
 export default function Home() {
   const [messages, setMessages] = useState([
@@ -24,7 +24,7 @@ export default function Home() {
 
   // connectAuthEmulator(auth,"http://localhost:9099")
 
-  const loginEmailPassword = async () => {
+  const loginEmailPassword = async (txtEmail, txtPassword) => {
     // const loginEmail = txtEmail.value 
     // const loginPassword = txtPassword.value
 
@@ -54,12 +54,16 @@ export default function Home() {
     
     }
   
-  // btnLogin.addEventListener("click",loginEmailPassword)
+
 
   const handleClose = () => setOpen(false)
   const handleOpen = () => setOpen(true)
 
-
+  const createAccount = async (txtEmail, txtPassword) =>{
+    const userSinginCredential = await createUserWithEmailAndPassword(auth, txtEmail, txtPassword)
+    console.log(userSinginCredential.user)
+    }
+  
 
 
 
@@ -145,7 +149,7 @@ export default function Home() {
            }
            /><Stack
            direction='row'
-           spacing={6}>
+           spacing={1}>
            <Button
            variant = 'contained'
            onClick={()=>{
@@ -156,7 +160,17 @@ export default function Home() {
            >log In</Button>
            <Button
            variant='contained'
-                      >Sign up</Button></Stack>
+           onClick={()=>{
+            createAccount(txtEmail,txtPassword)
+            handleClose()
+           }}
+                      >Sign up</Button>
+                      
+          <Button
+          variant='contained'
+          onClick={(e) =>
+            handleClose()
+          }>cancel</Button></Stack>
         </Stack>
         </Box>
      </Modal>
