@@ -13,7 +13,7 @@ import {getAuth, connectAuthEmulator, signInWithEmailAndPassword} from 'firebase
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDLje0Ch0lZDSMoYwSSdpJVbM4LWurEw1Q",
+  apiKey: API_KEY,
   authDomain: "ai-chat-support-8d9ed.firebaseapp.com",
   projectId: "ai-chat-support-8d9ed",
   storageBucket: "ai-chat-support-8d9ed.appspot.com",
