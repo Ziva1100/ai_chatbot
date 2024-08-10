@@ -1,0 +1,15 @@
+[debug] [2024-08-10T13:48:58.697Z] ----------------------------------------------------------------------
+[debug] [2024-08-10T13:48:58.701Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\zivav\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only auth
+[debug] [2024-08-10T13:48:58.701Z] CLI Version:   13.15.1
+[debug] [2024-08-10T13:48:58.702Z] Platform:      win32
+[debug] [2024-08-10T13:48:58.702Z] Node Version:  v20.16.0
+[debug] [2024-08-10T13:48:58.702Z] Time:          Sat Aug 10 2024 08:48:58 GMT-0500 (Central Daylight Time)
+[debug] [2024-08-10T13:48:58.702Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-10T13:48:58.837Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-10T13:48:58.838Z] > authorizing via signed-in user (zivaviviane.puh@gmail.com)
+[info] i  emulators: Starting emulators: auth {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth"}}
+[debug] [2024-08-10T13:48:58.852Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-10T13:48:58.852Z] [auth] Authentication Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-10T13:48:58.853Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"auth":[{"address":"127.0.0.1","family":"IPv4","port":9099}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-08-10T13:48:58.859Z] [hub] writing locator at C:\Users\zivav\AppData\Local\Temp\hub-ai-chat-support-8d9ed.json
